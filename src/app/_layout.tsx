@@ -3,6 +3,7 @@ import {Slot} from 'expo-router';
 import {DarkTheme,ThemeProvider} from '@react-navigation/native';
 import {ClerkProvider} from '@clerk/clerk-expo'
 import { tokenCache } from '@clerk/clerk-expo/token-cache'
+import { StatusBar } from 'react-native';
 
 
 const theme = {
@@ -21,6 +22,7 @@ export default function Layout() {
     <ThemeProvider value={theme}>
       <ClerkProvider tokenCache={tokenCache}>
         <Slot />
+        <StatusBar barStyle='light-content' backgroundColor='#010D1A'/>
       </ClerkProvider>
     </ThemeProvider>
   )

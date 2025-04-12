@@ -14,7 +14,6 @@
     "production": {
       "developmentClient": false,
       "distribution": "store",
-      "buildType": "apk",  
       "env": {
         "ENV": "production"
       }

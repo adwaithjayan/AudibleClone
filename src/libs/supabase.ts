@@ -1,13 +1,13 @@
-import { createClient } from "@supabase/supabase-js";
+import { useAuth } from '@clerk/clerk-expo';
+import { createClient } from '@supabase/supabase-js';
 
+const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL!;
+const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY!;
 
-const url = process.env.EXPO_PUBLIC_SUPBASE_URL!;
-const key = process.env.EXPO_PUBLIC_SUPBASE_ANON_KEY!;
+export const useSupabase = () => {
+  const { getToken } = useAuth();
 
-export const supabase = createClient(url,key,{
-    auth:{
-        autoRefreshToken:true,
-        persistSession:true,
-        detectSessionInUrl:false
-    }
-})
+  return createClient(supabaseUrl, supabaseAnonKey, {
+    accessToken: async () => getToken() ?? null,
+  });
+};

@@ -9,7 +9,9 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@clerk/clerk-expo": "^2.9.11",
     "expo": "~52.0.43",
+    "expo-secure-store": "^14.0.1",
     "expo-status-bar": "~2.0.1",
     "nativewind": "^4.1.23",
     "react": "18.3.1",

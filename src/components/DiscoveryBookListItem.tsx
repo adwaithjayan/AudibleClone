@@ -41,14 +41,14 @@ export default function DiscoveryBookListItem({
   });
 
   return (
-    <Pressable onPress={() => {}} className='flex-row gap-4 items-center'>
+    <Pressable onPress={() => {}} className='flex-row gap-4 items-center rounded-[10px] border-slate-900 border  p-2'>
       <Image
         source={{ uri: book.thumbnail_url }}
-        className='w-16 aspect-square rounded-md'
+        className='w-14 aspect-square rounded-md'
       />
-      <View className='gap-1 flex-1'>
-        <Text className='text-2xl text-gray-100 font-bold'>{book.title}</Text>
-        <Text className='text-gray-400'>{book.author}</Text>
+      <View className='gap-0.5 flex-1'>
+        <Text className='text-lg text-gray-100 font-semibold'>{book.title}</Text>
+        <Text className='text-gray-400 text-xs'>{book.author}</Text>
       </View>
 
       <AntDesign

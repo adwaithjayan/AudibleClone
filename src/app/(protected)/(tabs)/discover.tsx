@@ -22,6 +22,8 @@ export default function Discover() {
   return (
     <FlatList
       data={data?.data || []}
+    showsVerticalScrollIndicator={false}
+
       contentContainerClassName='gap-4 p-2'
       renderItem={({ item }) => <DiscoveryBookListItem book={item} />}
     />

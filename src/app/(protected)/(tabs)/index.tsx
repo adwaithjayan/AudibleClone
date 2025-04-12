@@ -24,8 +24,9 @@ export default function App() {
 
   return (
     <FlatList
+    showsVerticalScrollIndicator={false}
       data={data?.data || []}
-      contentContainerClassName='gap-4 p-2'
+      contentContainerClassName='gap-4 p-2 px-3'
       renderItem={({ item }) => <BookListItem book={item.book} />}
     />
   );

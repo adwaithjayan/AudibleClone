@@ -20,15 +20,15 @@ export default function BookListItem({ book }: BookListItemProps) {
   return (
     <Pressable
       onPress={() => setBook(book)}
-      className='flex-row gap-4 items-center'
+      className='flex-row gap-4 items-center border border-slate-900 rounded-[10px] p-2 '
     >
       <Image
         source={{ uri: book.thumbnail_url }}
-        className='w-16 aspect-square rounded-md'
+        className='w-14 aspect-square rounded-md'
       />
-      <View className='gap-1 flex-1'>
-        <Text className='text-2xl text-gray-100 font-bold'>{book.title}</Text>
-        <Text className='text-gray-400'>{book.author}</Text>
+      <View className='gap-0.5 flex-1'>
+        <Text className='text-lg text-gray-100 font-bold'>{book.title}</Text>
+        <Text className='text-gray-400 text-sm'>{book.author}</Text>
       </View>
 
       <AntDesign name='playcircleo' size={24} color='gainsboro' />

@@ -5,7 +5,15 @@ import FloatingPlayer from '@/components/flotingPlayer';
 
 export default function TabsLayout() {
   return (
-    <Tabs
+    <Tabs screenOptions={{
+      tabBarStyle:{
+        borderRadius:50,
+        borderWidth:1,
+        marginBottom:10,
+        marginInline:5,
+      },
+      tabBarShowLabel:false
+    }}
       tabBar={(props) => (
         <>
           <FloatingPlayer />

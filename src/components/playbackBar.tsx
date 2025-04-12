@@ -35,7 +35,7 @@ export default function PlaybackBar({
   };
 
   return (
-    <View className='gap-4'>
+    <View className='gap-4 p-3'>
       <Pressable
         onPress={onHandleSeek}
         onLayout={(event) => setWidth(event.nativeEvent.layout.width)}

@@ -4,6 +4,7 @@ import {DarkTheme,ThemeProvider} from '@react-navigation/native';
 import {ClerkProvider} from '@clerk/clerk-expo'
 import { tokenCache } from '@clerk/clerk-expo/token-cache'
 import { StatusBar } from 'react-native';
+import PlayerProvider from '@/provider/playerProvider';
 
 
 const theme = {
@@ -21,7 +22,9 @@ export default function Layout() {
   return (
     <ThemeProvider value={theme}>
       <ClerkProvider tokenCache={tokenCache}>
+        <PlayerProvider>
         <Slot />
+        </PlayerProvider>
         <StatusBar barStyle='light-content' backgroundColor='#010D1A'/>
       </ClerkProvider>
     </ThemeProvider>

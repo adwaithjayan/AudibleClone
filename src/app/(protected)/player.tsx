@@ -4,18 +4,15 @@ import { router } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 
-import dummyBooks from '@/dummyBooks';
 import PlaybackBar from '@/components/playbackBar';
 
-import { useAudioPlayer, useAudioPlayerStatus } from 'expo-audio';
+import { useAudioPlayerStatus } from 'expo-audio';
+import { usePlayer } from '@/provider/playerProvider';
 
 export default function PlayerScreen() {
-  const book = dummyBooks[0];
-
-  const player = useAudioPlayer({ uri: book.audio_url });
+  const { player, book } = usePlayer();
   const playerStatus = useAudioPlayerStatus(player);
 
-  console.log(JSON.stringify(playerStatus, null, 2));
 
   return (
     <SafeAreaView className='flex-1  p-4 py-10 gap-4'>
@@ -35,9 +32,11 @@ export default function PlayerScreen() {
         <Text className='text-white text-2xl font-bold text-center'>
           {book.title}
         </Text>
+
         <PlaybackBar
           currentTime={playerStatus.currentTime}
           duration={playerStatus.duration}
+          onSeek={(seconds: number) => player.seekTo(seconds)}
         />
 
         <View className='flex-row items-center justify-between'>

@@ -1,6 +1,5 @@
 import { AudioPlayer } from 'expo-audio';
 import { createContext, PropsWithChildren, useContext, useState } from 'react';
-import dummyBooks from '@/dummyBooks';
 import { useAudioPlayer } from 'expo-audio';
 
 type PlayerContextType = {

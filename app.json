@@ -20,7 +20,12 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ],
+      "package": "com.adwaith_aj.AudibleClone"
     },
     "web": {
       "favicon": "./assets/favicon.png",
@@ -29,6 +34,14 @@
     "plugins": [
       "expo-router",
       "expo-audio"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "8e5ac3ff-5630-468a-a00b-1d3d9b187d3b"
+      }
+    }
   }
 }

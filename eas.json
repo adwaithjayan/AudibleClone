@@ -14,6 +14,7 @@
     "production": {
       "developmentClient": false,
       "distribution": "store",
+      "buildType": "apk",  
       "env": {
         "ENV": "production"
       }
@@ -25,11 +26,6 @@
         "simulator": true
       },
       "environment": "development"
-    },
-    "android": {
-      "production": {
-        "buildType": "apk"
-      }
     }
   },
   "submit": {

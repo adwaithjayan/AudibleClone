@@ -12,7 +12,11 @@
       "distribution": "internal"
     },
     "production": {
-      "autoIncrement": true
+      "developmentClient": false,
+      "distribution": "store",
+      "env": {
+        "ENV": "production"
+      }
     },
     "development-simulator": {
       "developmentClient": true,
@@ -21,6 +25,11 @@
         "simulator": true
       },
       "environment": "development"
+    },
+    "android": {
+      "production": {
+        "buildType": "apk"
+      }
     }
   },
   "submit": {

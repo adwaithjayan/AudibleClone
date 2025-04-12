@@ -1,8 +1,9 @@
 {
   "expo": {
-    "name": "AubibleClone",
-    "slug": "AubibleClone",
+    "name": "AudibleClone",
+    "slug": "AudibleClone",
     "version": "1.0.0",
+    "scheme":"audibleclone",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -24,6 +25,9 @@
     "web": {
       "favicon": "./assets/favicon.png",
       "bundler": "metro"
-    }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
